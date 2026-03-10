@@ -12,3 +12,10 @@
 | flux-system | gcs-credentials            | `service-account.json`                             | GCS credentials for prow                                                                                                                                                                        |             |
 | apps        | prow-jenkins-operator-auth | `user`, `token`                                    | auth to external jenkins controller                                                                                                                                                             |             |
 | apps        | prow-tls                   |                                                    | prow site ingress cert secret                                                                                                                                                                   |             |
+
+### GCS buckets (prereq)
+
+This repo currently does not provision GCS buckets via IaC. Create and configure buckets out-of-band before enabling workloads that depend on them (e.g. Bazel remote cache, dependency mirrors).
+
+Runbook:
+- docs/runbooks/gcp/gcs-buckets.md
